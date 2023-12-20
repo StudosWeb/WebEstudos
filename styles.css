@@ -794,7 +794,11 @@ h1{
     display: block;
   }
 
-  #breve, #breve2{
+  h3 > #breve{
+    display: none;
+  }
+
+  h3 > #breve2{
     display: none;
   }
 
