@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="Login2.css">
+    <link rel="icon" href="./img/door-open.svg" type="image/x-icon">
+    <title>Login - Estudos</title>
+</head>
+<body>
+  <div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
+<div class="login-box">
+  <h2>LOGIN CLASS</h2>
+  <form>
+      <div class="user-box">
+          <input type="text" name="class" required autofocus id="classInput">
+          <label>Class</label>
+      </div>
+      <div class="user-box">
+          <input type="password" name="password" required id="passwordInput">
+          <label>Password</label>
+      </div>
+      <a href="./Loading/Carregando.html" id="submitButton" class="styled-button">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          login
+      </a>
+  </form>
+</div>
+
+<script>
+const classInput = document.getElementById("classInput");
+const passwordInput = document.getElementById("passwordInput");
+const submitButton = document.getElementById("submitButton");
+
+// Lista de pares válidos de nome de usuário e senha
+const usersAndPasswords = [
+  { username: "TA", password: "PH3823" },
+  { username: "TB", password: "SA9223" },
+];
+
+// Função para verificar se ambos os campos estão preenchidos e os dados de login são corretos
+function checkInputs() {
+  if (classInput.value !== "" && passwordInput.value !== "") {
+    const inputUsername = classInput.value;
+    const inputPassword = passwordInput.value;
+
+    // Verifique se o par de nome de usuário e senha está na lista de pares válidos
+    const isValid = usersAndPasswords.some((userPass) => {
+      return userPass.username === inputUsername && userPass.password === inputPassword;
+    });
+
+    if (isValid) {
+      classInput.classList.add("valid-input"); // Adicione a classe para a borda verde
+      submitButton.style.display = "inline-block";
+    } else {
+      classInput.classList.remove("valid-input"); // Remova a classe para a borda verde
+      submitButton.style.display = "none";
+    }
+  } else {
+    classInput.classList.remove("valid-input"); // Remova a classe para a borda verde
+    submitButton.style.display = "none";
+  }
+}
+
+// Adicionar um ouvinte de eventos para verificar os campos de entrada
+classInput.addEventListener("input", checkInputs);
+passwordInput.addEventListener("input", checkInputs);
+
+// Verifique os campos iniciais quando a página for carregada
+checkInputs();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #313131;
+    font-family: 'Outfit', sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #252525;
+    overflow: hidden;
+    box-shadow: 0 5px 0 #116acf;
+}
+
+ul h2 {
+    color: white;
+    margin: 0;
+    padding: 10px 16px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #444;
+}
+
+/* Estilos para o conteúdo */
+.content {
+    padding: 20px;
+}
+
+.interface {
+    margin-top: 2px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+h1.titulo{
+    color: #fff;
+    font-size: 39px;
+    text-align: center;
+}
+
+h1.titulo span{
+    color: #116acf;
+    position: relative;
+    animation: colors 5s ease-in-out infinite alternate;
+}
+
+section.resumos{
+    padding: 40px 4%;
+}
+
+.resumos-card{
+    max-width: 900px;
+    margin-left: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background-color: #1d1d1db6;
+    border-radius: 30px;
+    box-shadow: 0 0 20px #444 ;
+    height: 300px;
+}
+.resumos-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ffffffb2;
+}
+.txt{
+    padding: 20px;
+    margin-top: 20px;
+}
+p{
+    margin-top: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+
+p span{
+    color: #116acf;
+}
+
+p a{
+    color: #1ca51c;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: #116acf77;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #c2c2c2;
+    border-radius: 40px;
+}
+
+footer {
+    background-color: #252525;
+    height: 100px;
+    box-shadow: 0 0 15px 0px #116acf;
+}
+
+@media (max-width: 780px) {
+    h1.titulo{
+        font-size: 29px;
+    }
+
+    
+.resumos-card{
+    margin-left: 10px;
+    height: 400px;
+}
+.resumos-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ffffffb2;
+}
+.txt{
+    padding: 20px;
+    margin-top: 20px;
+}
+p{
+    margin-top: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+
+p span{
+    color: #116acf;
+}
+
+p a{
+    color: #1ca51c;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+}
